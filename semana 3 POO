@@ -1,0 +1,28 @@
+class Dia:
+    def __init__(self):
+        self.__temperatura = None  # Encapsulamiento del atributo
+
+    def set_temperatura(self, temperatura):
+        self.__temperatura = temperatura
+
+    def get_temperatura(self):
+        return self.__temperatura
+
+    def calcular_promedio(self, dias):
+        """Calcula el promedio de temperaturas de una lista de días"""
+        suma_temperaturas = sum(dia.get_temperatura() for dia in dias)
+        promedio = suma_temperaturas / len(dias)
+        return promedio
+        
+# Creación de objetos Dia
+dias_semana = [Dia() for _ in range(7)]
+
+# Ingreso de datos
+for dia in dias_semana:
+    temperatura = float(input("Ingrese la temperatura del día: "))
+    dia.set_temperatura(temperatura)
+
+# Cálculo del promedio
+promedio = dias_semana[0].calcular_promedio(dias_semana)  # Cualquier día puede llamar al método
+
+print(f"El promedio semanal de temperaturas es: {promedio:.2f} °C")
