@@ -1,0 +1,1 @@
+En este repositorio se realizaran trabajos y deberes de la materia Programación Orientada a Objetos correspondientes al segundo semestre de la carreraa de Ingeniería en Tecnologías de la Información  
